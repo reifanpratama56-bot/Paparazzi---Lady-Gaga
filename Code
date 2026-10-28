@@ -1,0 +1,43 @@
+import sys
+import time
+
+def jalanin_lirik():
+    lirik = [
+        ("Cause you know that baby, i ", 0.06, 0.1),
+        ("I'm your biggest fan, i'll follow ", 0.07, 0.1),
+        ("You untill you love me ", 0.08, 0.01),
+        ("Papa- ", 0.12, 0.4),
+        ("Paparazzi ", 0.16, 0.2),
+        ("Baby, there's no other ", 0.06, 0.1),
+        ("Superstar ", 0.1, 0.1),
+        ("You know that i'll be ", 0.07, 0.2),
+        ("Your papa- ", 0.08, 0.4),
+        ("Paparazzi ", 0.16, 0.2),
+        ("Promise i'll be kind ", 0.1, 0.08),
+        ("But i won't stop untill that boy is mine ", 0.09, 1),
+        ("Baby, you'll be famous, chase ", 0.08, 0.08), 
+        ("You down untill you love me ", 0.07, 0.2),
+        ("Papa- ", 0.12, 0.4),
+        ("Paparazzi ", 0.15, 0.2),
+        
+            
+    ]
+
+    print("\n== Paparazzi - Lady Gaga ==")
+    time.sleep(0.1)
+
+    for baris_lagu, delay_karakter, delay_setelah in lirik:
+
+        # Efek mengetik per karakter
+        for karakter in baris_lagu:
+            print(karakter, end="")
+            sys.stdout.flush()
+            time.sleep(delay_karakter)
+
+        # Jeda mengikuti perpindahan nada/lirik
+        time.sleep(delay_setelah)
+        print("")
+
+    print("// Code by Fanncode")
+
+jalanin_lirik()
